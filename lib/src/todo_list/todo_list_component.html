@@ -11,6 +11,14 @@
                 [disabled]="newTodo.isEmpty">
     <material-icon icon="add"></material-icon>
   </material-fab>
+  
+  <material-datepicker [(date)]="date"
+                       [minDate]="limitToRange.start"
+                       [maxDate]="limitToRange.end"
+                       [required]="true"
+                       [disabled]="newTodo.isEmpty">
+  </material-datepicker>
+
 </div>
 
 <p *ngIf="items.isEmpty">

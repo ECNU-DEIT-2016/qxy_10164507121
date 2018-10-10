@@ -1,0 +1,11 @@
+<div id="c-date">
+    <div id="c-date-left"><span>{{toDate.year}}-{{toDate.month}}-{{toDate.day}}</span></div>
+    <div id="c-date-right"><span>星期{{today.weekday}}</span></div>
+</div>
+
+<div id="c-month" class="inline-block">
+
+    <material-calendar-picker class="calendar" [state]="dateModel">
+    </material-calendar-picker>
+
+</div>
