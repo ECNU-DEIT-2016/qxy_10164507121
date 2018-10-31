@@ -28,7 +28,4 @@ class BackendService {
       ? _mockStudents
       : throw Exception('Cannot get object of this type');
 
-  Future<Student> get(int id){
-
-  }
 }

@@ -4,8 +4,6 @@ import 'package:angular_forms/angular_forms.dart';
 import 'student.dart';
 import 'student_detail_component.dart';
 import 'student_service.dart';
-import 'dart:math';
-import 'dart:html';
 
 
 @Component(

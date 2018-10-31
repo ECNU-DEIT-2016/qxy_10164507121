@@ -7,7 +7,7 @@ import 'src/random_rollcall/backend_service.dart';
 import 'src/random_rollcall/student_list_component.dart';
 import 'src/random_rollcall/student_service.dart';
 import 'src/random_rollcall/logger_service.dart';
-import 'src/random_rollcall/sales_tax_component.dart';
+
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -20,7 +20,7 @@ import 'src/random_rollcall/sales_tax_component.dart';
     <student-list></student-list>
   ''',
   directives: [
-    StudentListComponent, SalesTaxComponent
+    StudentListComponent
   ],
   providers: [
     ClassProvider(BackendService),

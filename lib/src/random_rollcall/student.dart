@@ -6,4 +6,8 @@ class Student {
 
   Student(this.name, [this.score = 100]) : id = _nextId++;
 
+  void update(Student stu){
+    stu.score = stu.score - 5;
+  }
+
 }

@@ -1,9 +1,13 @@
 <hr>
 <h4>{{student.name}}</h4>
-<div>Id: {{student.id}}</div>
-<div>Name:{{student.name}}
+<div>学号: {{student.id}}</div>
+<div>姓名:{{student.name}}
   <!--<input [(ngModel)]="student.name">-->
 </div>
 <div>Score:{{student.score}}
   <!--<input [(ngModel)]="student.score">-->
 </div>
+<nav>
+  <a (click)="callResult(1,student)">到</a>
+  <a (click)="callResult(0,student)">未到</a>
+</nav>
