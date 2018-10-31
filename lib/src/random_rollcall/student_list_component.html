@@ -1,0 +1,11 @@
+
+<!--<ul>-->
+  <!--<li *ngFor="let student of students" (click)="selectStudent(student)">-->
+    <!--{{student.name}}-->
+  <!--</li>-->
+<!--</ul>-->
+<nav>
+  <a (click)="randomCall()">点名</a>
+</nav>
+
+<student-detail *ngIf="randomStudent != null" [student]="randomStudent"></student-detail>

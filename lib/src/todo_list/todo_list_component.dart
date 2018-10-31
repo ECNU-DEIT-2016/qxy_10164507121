@@ -30,6 +30,7 @@ import 'package:angular_components/utils/browser/window/module.dart';
   ],
   providers: [const ClassProvider(TodoListService),windowBindings, datepickerBindings],
 )
+
 class TodoListComponent implements OnInit{
   final TodoListService todoListService;
 
