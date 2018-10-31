@@ -1,13 +1,15 @@
 <hr>
 <h4>{{student.name}}</h4>
-<div>学号: {{student.id}}</div>
-<div>姓名:{{student.name}}
+<div>学号: <b>{{student.id}}</b></div>
+<div>姓名:<b>{{student.name}}</b>
   <!--<input [(ngModel)]="student.name">-->
 </div>
-<div>Score:{{student.score}}
+<div>平时成绩:<b>{{student.score}}</b>
   <!--<input [(ngModel)]="student.score">-->
 </div>
 <nav>
-  <a (click)="callResult(1,student)">到</a>
-  <a (click)="callResult(0,student)">未到</a>
+    <p>回答表现：</p>
+  <a (click)="callResult(2,student)">优秀</a>
+  <a (click)="callResult(1,student)">良好</a>
+  <a (click)="callResult(0,student)">不合格</a>
 </nav>

@@ -5,7 +5,7 @@ nav a {
     display: inline-block;
     background-color: #eee;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 16px;
 }
 nav a:visited, a:link {
     color: #607D8B;
