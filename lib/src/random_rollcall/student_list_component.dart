@@ -1,6 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
-
+import 'dart:html';
 import 'student.dart';
 import 'student_detail_component.dart';
 import 'student_service.dart';
@@ -15,11 +15,9 @@ import 'package:angular_components/material_select/material_dropdown_select.dart
 )
 class StudentListComponent implements OnInit {
   List<Student> students;
-  //Student selectedStudent;
+  int selectClass = 0;
   Student randomStudent;
   final StudentService _studentService;
-  //final myOptions = [1, 2, 3];
-  //int mySelection = 2;
 
   StudentListComponent(this._studentService);
 
@@ -34,6 +32,21 @@ class StudentListComponent implements OnInit {
   void randomCall(){
     //random.nextInt(3).toString();
     //window.alert(random.nextInt(3).toString());
+    selectClass = 0;
     randomStudent =_studentService.read();
+  }
+
+  void classList(){
+    //random.nextInt(3).toString();
+    //window.alert(random.nextInt(3).toString());
+    randomStudent = null;
+    selectClass = 1;
+  }
+
+  void add(String name){
+    name = name.trim();
+    if (name.isEmpty) return null;
+    students.add(Student(name));
+    window.alert("添加成功");
   }
 }

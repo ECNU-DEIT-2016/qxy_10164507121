@@ -16,4 +16,5 @@ class Student {
     else
       stu.score = stu.score + 5;
   }
+
 }

@@ -24,8 +24,5 @@ class StudentService {
     return student;
   }
 
-  void update(Student stu){
-    stu.score = stu.score - 5;
-  }
 
 }

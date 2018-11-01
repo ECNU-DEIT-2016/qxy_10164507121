@@ -1,17 +1,53 @@
-
-<!--<ul>-->
-  <!--<li *ngFor="let student of students" (click)="selectStudent(student)">-->
-    <!--{{student.name}}-->
-  <!--</li>-->
-<!--</ul>-->
-<nav>
+<!--<nav>-->
   <!--<material-dropdown-select-->
           <!--[options]="myOptions"-->
           <!--[(selection)]="mySelection"-->
           <!--[buttonText]="...">-->
   <!--</material-dropdown-select>-->
-
-  <a (click)="randomCall()">点名</a>
+<nav>
+  <div class="grid grid-pad">
+    <a (click)="randomCall()" class="col-1-4">
+      <div class="module hero">
+        <h4>随机点名</h4>
+      </div>
+    </a>
+    <a (click)="classList()" class="col-1-4">
+      <div class="module hero">
+        <h4>班级列表</h4>
+      </div>
+    </a>
+  </div>
 </nav>
+<!--</nav>-->
+<div class="detail">
+  <student-detail *ngIf="randomStudent != null" [student]="randomStudent"></student-detail>
+</div>
 
-<student-detail *ngIf="randomStudent != null" [student]="randomStudent"></student-detail>
+<div *ngIf="selectClass == 1">
+  <hr>
+  <!--<ul>-->
+  <!--<li *ngFor="let student of students">-->
+  <!--{{student.name}}-->
+  <!--</li>-->
+  <!--</ul>-->
+  <!--<input [(ngModel)]="student.name">-->
+  <div class="input">
+    <p>输入学生姓名</p>
+    <input #studentName>
+    <a (click)="add(studentName.value); studentName.value=''">add</a>
+  </div>
+
+  <table border="1">
+    <tr>
+      <td>学号</td>
+      <td>姓名</td>
+      <td>平时成绩</td>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.score}}</td>
+    </tr>
+  </table>
+</div>
+

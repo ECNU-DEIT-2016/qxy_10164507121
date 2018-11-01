@@ -1,19 +1,145 @@
-nav a {
-    padding: 5px 10px;
+/*nav a {*/
+    /*padding: 5px 10px;*/
+    /*text-decoration: none;*/
+    /*margin-top: 10px;*/
+    /*display: inline-block;*/
+    /*background-color: #eee;*/
+    /*border-radius: 4px;*/
+    /*font-size: 20px;*/
+/*}*/
+/*nav a:visited, a:link {*/
+    /*color: #607D8B;*/
+/*}*/
+/*nav a:hover {*/
+    /*color: #039be5;*/
+    /*background-color: #CFD8DC;*/
+/*}*/
+/*nav a.active {*/
+    /*color: #039be5;*/
+/*}*/
+.input a {
+padding: 5px 10px;
+/*text-decoration: none;*/
+/*margin-top: 10px;*/
+/*display: inline-block;*/
+background-color: #eee;
+border-radius: 4px;
+font-size: 16px;
+}
+
+.input a:visited, a:link {
+color: #607D8B;
+}
+
+.input a:hover {
+color: #039be5;
+background-color: #CFD8DC;
+}
+
+p{
+    font-size: 14px;
+}
+
+.input a.active {
+color: #039be5;
+}
+
+.input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+    padding-right: 0;
+}
+a {
     text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 4px;
-    font-size: 20px;
 }
-nav a:visited, a:link {
-    color: #607D8B;
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-nav a:hover {
-    color: #039be5;
-    background-color: #CFD8DC;
+h3 {
+    text-align: center; margin-bottom: 0;
 }
-nav a.active {
-    color: #039be5;
+h4 {
+    position: relative;
+}
+.grid {
+    margin: 0;
+    width: 100%;
+}
+.col-1-4 {
+    width: 50%;
+}
+.module {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #607D8B;
+    border-radius: 2px;
+}
+.module:hover {
+    background-color: #EEE;
+    cursor: pointer;
+    color: #607d8b;
+}
+.grid-pad {
+    padding: 10px 0;
+    width: 100%;
+}
+.grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+}
+@media (max-width: 600px) {
+    .module {
+        font-size: 10px;
+        max-height: 75px; }
+}
+@media (max-width: 1024px) {
+    .grid {
+        margin: 0;
+    }
+    .module {
+        min-width: 60px;
+    }
+}
+
+.detail{
+    width: 100%;
+    float: left;
+}
+table
+{
+    border-collapse: collapse;
+    /*margin: 0 auto;*/
+    text-align: left;
+}
+table td, table th
+{
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+    width: 150px;
+}
+table thead th
+{
+    background-color: #CCE8EB;
+    /*width: 100px;*/
+}
+table tr:nth-child(odd)
+{
+    background: #fff;
+}
+table tr:nth-child(even)
+{
+    background: #F5FAFA;
 }
