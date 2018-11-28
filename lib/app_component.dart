@@ -11,7 +11,6 @@ import 'src/random_rollcall/logger_service.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
-// <sales-tax></sales-tax>
 
 
 @Component(

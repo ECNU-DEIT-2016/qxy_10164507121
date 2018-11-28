@@ -6,6 +6,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/my_server/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/my_server/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/my_server/build" />
+      <excludeFolder url="file://$MODULE_DIR$/my_server/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/my_server/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/my_server/build" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
