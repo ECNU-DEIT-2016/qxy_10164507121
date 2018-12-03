@@ -37,39 +37,46 @@ class MyServerChannel extends ApplicationChannel {
   }
 }
 
+
 class MySecondController extends ResourceController{
-      List<String> things = Users.getAll();
-      String randomThing = Users.read();
+//      List<String> things = Users.getAll();
+//      String randomThing = Users.read();
+      var results;
+
 
       @Operation.get()
       Future<Response> getThings() async {
-      //    return Response.ok(things);
-
-        return Response.ok(randomThing);
+        results = await Users.getAll();
+        var random = Random();
+        return Response.ok(results[random.nextInt(results.length)]);
   }
 }
 
 class MyController extends ResourceController {
-//   final List<String> things = ['thing5', 'thing6'];
-  //List<String> things = Users.getAll();
-//  final List<String> things = ['戚晓颖', '蔡心蕊', '李典康','周嘉翔', '龙晶毅', '唐莉雯','吴松二', '张静雅','陈瑶', '郑可欣','朱子恒', '赵世宇'];
-//  final List<String> randomThings;
 
-  List<String> things = Users.getAll();
-  String randomThing = Users.read();
+//  final Users _user;
+//  MyController(this._user);
+  var results;
+  var selectStudent;
+
+//  String randomThing = Users.read();
+//  var results = Users.main();
 
   @Operation.get()
   Future<Response> getThings() async {
 //    return Response.ok(things);
-
-    return Response.ok(things);
+    results = await Users.getAll();
+    return Response.ok(results);
   }
 
   @Operation.get('id')
   Future<Response> getThing(@Bind.path('id') int id) async {
-    if (id < 0 || id >= things.length) {
+    selectStudent = await Users.selectStu(id);
+    if (id < 0 || id >= 12) {
+      print("test");
       return Response.notFound();
     }
-    return Response.ok(things[id]);
+    print(selectStudent);
+    return Response.ok(selectStudent);
   }
 }
